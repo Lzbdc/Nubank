@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Nubank</title>
+</head>
+<style>
+    body{
+        background-color:#0e0d0d;
+
+    }
+    .topo{
+        background-color: rgb(160, 32, 340);
+        margin-bottom: 40px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+    #logo, #name-pix, #name-saldo,#name-deposito{
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        font-weight: bolder;
+    
+    }
+    #name-pix, #name-saldo, #name-deposito{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .bandeiras{
+        border-radius: 15px;
+    }
+    .cartao{
+        background-color: rgb(160, 32, 340);
+        width: 350px;
+        height: 200px;
+        border-radius: 15px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .saque, .deposito{
+        margin: 0 auto;
+    }
+    #chip{
+        max-width: 35px;
+        margin-top: 20px;
+        margin-right: 230px;
+    }
+    #mastercard{
+        max-width: 65px;
+        margin-top: 20px;
+        margin-left: 230px;
+    }
+    h4{
+        color: #fff ;
+        font-weight: 500;
+        margin-right: 50px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .deposito-form , .deposito-pix{
+        max-width: 200px;
+        max-height: 150px;
+        width: 100%;
+        margin: 20px auto;
+        border: solid 1px #fff;
+        padding: 30px;
+        border-radius: 10px;
+        padding-bottom: 60px;
+    }
+    input, textarea{
+        width: 100%;
+        text-align: center;
+        border: none;
+        border: solid 1px #c1c1c1;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+    #enviar-pix, #depositar {
+        padding: 8px;
+        color:#fff;
+        font-family:'sans-serif';
+        font-weight: bold;
+        background-color:rgb(29, 29, 236);
+        border: none;
+        border-radius: 5px;
+        border: solid 1px #fff;
+    }
+    #deposito-saldo{
+        margin: 100px;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+</style>
+<body>
+    <header class="topo">
+        <h1 id="logo">
+            Nubank  
+        </h1>
+    </header>
+    <section>
+            <div class="saque">
+                <main class="cartao">
+                    <header class="bandeiras">
+                        <img id="mastercard" src="../mastercard.png" alt="">
+                    </header>
+                    <div class="Chip">
+                        <img id="chip" src="../chip-f.png" alt="">
+                    </div>
+                    <div>
+                        <h4>LUIZ H. M. ASSUNCAO</h4>
+                    </div>
+                </main>
+                <form action="" class="deposito-pix">
+                    <h2 id="name-pix">Pix</h2>
+                    <input placeholder="Nome" type="text">
+                    <input placeholder="000-000-000.00" type="tel">
+                    <input placeholder="10,00" type="number">
+                    <textarea name="" id="" placeholder="Deixe uma mensagem"></textarea>
+                    <button id="enviar-pix">Enviar</button>
+                </form>
+                
+            </div>
+            <div class="deposito">
+                <p id="deposito-saldo">Saldo: 100,00</p>
+                <form action="" class="deposito-form">
+                    <h2 id="name-deposito">Depositar</h2>
+                    <input placeholder="Nome" type="text">
+                    <input placeholder="000-000-000.00" type="tel">
+                    <input placeholder="10,00" type="number">
+                    <textarea name="" id="" placeholder="Deixe uma mensagem"></textarea>
+                    <button id="depositar">Enviar</button>
+                </form>
+            </div>
+        </section>
+    <script src="index.js"></script>
+</body>
+</html>
